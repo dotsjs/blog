@@ -1,10 +1,11 @@
 import { CreatePagesArgs } from 'gatsby';
 import path from 'path';
+import { Query } from '../graphql-types';
 
 export async function createPages({ actions, graphql }: CreatePagesArgs) {
     const { createPage } = actions;
 
-    const { data, errors } = await graphql(`
+    const { data, errors } = await graphql<Query>(`
         {
             allMarkdownRemark {
                 edges {
@@ -23,7 +24,7 @@ export async function createPages({ actions, graphql }: CreatePagesArgs) {
         throw errors;
     }
 
-    data.allMarkdownRemark.edges.forEach(({ node }: any) => {
+    data.allMarkdownRemark.edges.forEach(({ node }) => {
         createPage({
             path: String(node.frontmatter.title),
             context: {
