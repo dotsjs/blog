@@ -48,6 +48,12 @@ module.exports = {
             },
         },
         {
+            resolve: `gatsby-plugin-catch-links`,
+            options: {
+                excludePattern: /(excluded-link|external)/,
+            },
+        },
+        {
             resolve: `gatsby-plugin-generate-typings`,
             options: {
                 dest: `./src/graphql-types.d.ts`,
