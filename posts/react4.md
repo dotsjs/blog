@@ -9,9 +9,10 @@ title: '무작정 따라 하는 리액트 - 배열'
 ## 목차
 
 1. [배열이란](##배열이란)
-2. [추가하기](##추가하기)
-3. [수정하기](##수정하기)
-4. [삭제하기](##삭제하기)
+2. [보여주기](##보여주기)
+3. [추가하기](##추가하기)
+4. [수정하기](##수정하기)
+5. [삭제하기](##삭제하기)
 
 ## 배열이란
 
@@ -24,6 +25,40 @@ const [list1, setList1] = useState(new Array());
 const [list2, setList2] = useState(Array());
 const [list3, setList3] = useState([]);
 ```
+
+## 보여주기
+
+```javascript
+[
+    { name: '박은우', age: 25, gender: '남' },
+    { name: '방소윤', age: 24, gender: '여' },
+    { name: '김민지', age: 25, gender: '여' },
+    { name: '목민주', age: 24, gender: '여' },
+];
+```
+
+라는 배열이 있다고 했을 때 `ㅁㅁㅁ님의 나이는 ㅁㅁ살이며 성별은 ㅁㅁ입니다`라는 리스트를 ul과 li 태그를 이용해 나타내려고 합니다. 그러기 위해서 `map`함수를 이용하는데 map의 파라미터로 함수를 전달해 주어야 합니다. 해당 함수는 배열내부의 각각의 값과 index를 파라미터로 받아서 보여주고자 하는 element로 반환해주면 됩니다.
+
+```jsx
+function App() {
+    const [list, setList] = useState([
+        { name: '박은우', age: 25, gender: '남' },
+        { name: '방소윤', age: 24, gender: '여' },
+        { name: '김민지', age: 25, gender: '여' },
+        { name: '목민주', age: 24, gender: '여' },
+    ]);
+
+    return (
+        <ul>
+            {list.map((item, index) => (
+                <li>{`${item.name}님의 나이는 ${item.age}살 이며 성별은 ${item.gender}자입니다.`}</li>
+            ))}
+        </ul>
+    );
+}
+```
+
+ul태그 아래에 자바스크립트를 작성하기 위해 `{}`를 사용하고 list에 map함수를 작성해줍니다. map에게 전달하는 함수는 배열을 순서대로 순회하며 item과 index를 전달해 줍니다. 이를 이용해 element를 만들어서 반환해주면 됩니다.
 
 ## 추가하기
 
