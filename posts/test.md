@@ -7,3 +7,4 @@ title: '테스트'
 # Hi!
 
 마크다운으로 작성한 게시글 입니다.
+![codesandbox](./images/codesandbox.jpg)

@@ -7,6 +7,21 @@ module.exports = {
     plugins: [
         `gatsby-plugin-typescript`,
         `gatsby-plugin-react-helmet`,
+        `gatsby-plugin-sharp`,
+        `gatsby-transformer-sharp`,
+        {
+            resolve: `gatsby-transformer-remark`,
+            options: {
+                plugins: [
+                    {
+                        resolve: `gatsby-remark-images`,
+                        options: {
+                            maxWidth: 1200,
+                        },
+                    },
+                ],
+            },
+        },
         {
             resolve: 'gatsby-source-filesystem',
             options: {
@@ -14,9 +29,12 @@ module.exports = {
                 path: `${__dirname}/posts`,
             },
         },
-        `gatsby-transformer-remark`,
-        `gatsby-transformer-sharp`,
-        `gatsby-plugin-sharp`,
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                path: `${__dirname}/posts/images`,
+            },
+        },
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
