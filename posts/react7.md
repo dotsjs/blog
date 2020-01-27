@@ -1,5 +1,5 @@
 ---
-path: 'react06'
+path: 'react07'
 date: '2020-01-27 14:20:07'
 title: '무작정 따라 하는 리액트 - node'
 ---
