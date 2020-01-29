@@ -2256,6 +2256,7 @@ export type SitePageFieldsEnum =
   'pluginCreator___pluginOptions___plugins___name' |
   'pluginCreator___pluginOptions___plugins___version' |
   'pluginCreator___pluginOptions___plugins___browserAPIs' |
+  'pluginCreator___pluginOptions___plugins___ssrAPIs' |
   'pluginCreator___pluginOptions___plugins___pluginFilepath' |
   'pluginCreator___pluginOptions___maxWidth' |
   'pluginCreator___pluginOptions___name' |
@@ -2462,6 +2463,7 @@ export type SitePluginFieldsEnum =
   'pluginOptions___plugins___version' |
   'pluginOptions___plugins___pluginOptions___maxWidth' |
   'pluginOptions___plugins___browserAPIs' |
+  'pluginOptions___plugins___ssrAPIs' |
   'pluginOptions___plugins___pluginFilepath' |
   'pluginOptions___maxWidth' |
   'pluginOptions___name' |
@@ -2628,6 +2630,7 @@ export type SitePluginPluginOptionsPlugins = {
   version?: Maybe<Scalars['String']>,
   pluginOptions?: Maybe<SitePluginPluginOptionsPluginsPluginOptions>,
   browserAPIs?: Maybe<Array<Maybe<Scalars['String']>>>,
+  ssrAPIs?: Maybe<Array<Maybe<Scalars['String']>>>,
   pluginFilepath?: Maybe<Scalars['String']>,
 };
 
@@ -2638,6 +2641,7 @@ export type SitePluginPluginOptionsPluginsFilterInput = {
   version?: Maybe<StringQueryOperatorInput>,
   pluginOptions?: Maybe<SitePluginPluginOptionsPluginsPluginOptionsFilterInput>,
   browserAPIs?: Maybe<StringQueryOperatorInput>,
+  ssrAPIs?: Maybe<StringQueryOperatorInput>,
   pluginFilepath?: Maybe<StringQueryOperatorInput>,
 };
 

@@ -8,9 +8,9 @@ title: '무작정 따라 하는 리액트 - node'
 
 ## 목차
 
-1. [Node.js](##node.js)
-2. [npm](##npm)
-3. [create-react-app](##create-react-app)
+1. [Node.js](#node.js)
+2. [npm](#npm)
+3. [create-react-app](#create-react-app)
 
 ## Node.js
 

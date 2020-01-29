@@ -8,10 +8,10 @@ title: '무작정 따라 하는 리액트 - 생명주기'
 
 ## 목차
 
-1. [생명주기](##생명주기)
-2. [mount](##mount)
-3. [render](##render)
-4. [update](##update)
+1. [생명주기](#생명주기)
+2. [mount](#mount)
+3. [render](#render)
+4. [update](#update)
 
 ## 생명주기
 
