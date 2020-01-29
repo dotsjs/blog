@@ -40,9 +40,9 @@ npx create-react-app note
 
 ```
 note/
-├── node_modules
-├── public
-├── src
+├── node_modules/
+├── public/
+├── src/
 ├── .gitignore
 ├── package.json
 ├── README.md
