@@ -28,12 +28,12 @@ note = {
 
 ## state 선언
 
-데이터를 선언하기 위해선 어느 컴포넌트에서 선언해야하는 지 충분히 고민을 해봐야합니다. note들은 List에서 목록을 보여주기위해 사용되고 Note에서 내용을 보여주기 위해 사용됩니다. 각각의 컴포넌트들의 공통된 부모 컴포넌트에서 state를 생성해주면 됩니다. List와 Note의 공통 부모 컴포넌트는 App 컴포넌트 입니다.
+데이터를 선언하기 위해선 어느 컴포넌트에서 선언해야하는 지 충분히 고민을 해봐야합니다. note들은 List에서 목록을 보여주기위해 사용되고 Note에서 내용을 보여주기 위해 사용됩니다. 각각의 컴포넌트들의 공통된 부모 컴포넌트에서 state를 생성해주면 됩니다. List와 Note의 공통 부모 컴포넌트는 Main 컴포넌트 입니다.
 
 ```javascript
 import React, { useState } from 'react';
 
-function App() {
+function Main() {
     const [notes, setNotes] = useState([
         {
             id: '01',
