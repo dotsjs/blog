@@ -101,10 +101,10 @@ export default Header;
 ```jsx
 function Main() {
     return (
-        <div>
+        <main>
             <List />
             <Note />
-        </div>
+        </main>
     );
 }
 ```
@@ -141,11 +141,11 @@ Note 컴포넌트
 ```jsx
 export default function Note() {
     return (
-        <div>
+        <article>
             <h2>제목</h2>
             <p>내용</p>
             <button>수정</button>
-        </div>
+        </article>
     );
 }
 ```

@@ -20,10 +20,10 @@ function Main() {
     const [selected, setSelected] = useState(0);
     ...
     return (
-        <div>
+        <main>
             <List notes={notes} />
             <Note note={notes[selected]} />
-        </div>
+        </main>
     );
 }
 ```
@@ -39,10 +39,10 @@ function Main() {
         setSelected(index);
     };
     return (
-        <div>
+        <main>
             <List notes={notes} selectNote={selectNote} deleteNote={deleteNote} />
             <Note note={notes[selected]} />
-        </div>
+        </main>
     );
 }
 ```
@@ -66,14 +66,14 @@ function App() {
 ```jsx
 function Main({ editing, setEditing }) {
     return (
-        <div>
+        <main>
             <List notes={notes} selectNote={selectNote} deleteNote={deleteNote} />
             {editing ? (
                 <Edit addNote={addNote} modifyNote={modifyNote} />
             ) : (
                 <Note note={notes[selected]} setEditing={setEditing} />
             )}
-        </div>
+        </main>
     );
 }
 ```
@@ -129,7 +129,7 @@ function Edit({ addNote, modifyNote }) {
     };
     return (
         <form onSubmit={submitHandler}>
-            <input type="text" placeholder="제목" value={title} onChange={e => setTitle(e.target.value)} />
+            <input autoFocus type="text" placeholder="제목" value={title} onChange={e => setTitle(e.target.value)} />
             <textarea placeholder="내용" value={content} onChange={e => setContent(e.target.value)} />
             <input type="submit" value="확인" />
         </form>
@@ -162,7 +162,7 @@ function Edit({ addNote, modifyNote, modifying, setEditing, setModifying, note }
 function Main({ editing, setEditing }) {
     const [modifying, setModifying] = useState(false);
     return (
-        <div>
+        <main>
             <List notes={notes} selectNote={selectNote} deleteNote={deleteNote} />
             {editing ? (
                 <Edit
@@ -176,7 +176,7 @@ function Main({ editing, setEditing }) {
             ) : (
                 <Note note={notes[selected]} setEditing={setEditing} />
             )}
-        </div>
+        </main>
     );
 }
 ```
@@ -188,7 +188,7 @@ function Main({ editing, setEditing }) {
 ```jsx
 function Note({ note, setEditing, setModifying }) {
     return (
-        <div>
+        <article>
             <h2>{note.title}</h2>
             <p>{note.content}</p>
             <button
@@ -199,7 +199,7 @@ function Note({ note, setEditing, setModifying }) {
             >
                 수정
             </button>
-        </div>
+        </article>
     );
 }
 ```
@@ -230,10 +230,10 @@ function List({ notes, selectNote, deleteNote }) {
 ```jsx
 function Item({ note, selectNote, deleteNote }) {
     return (
-        <div onClick={() => selectNote(note.id)}>
+        <li onClick={() => selectNote(note.id)}>
             <h3>{note.title}</h3>
             <button onClick={() => deleteNote(note.id)}>삭제</button>
-        </div>
+        </li>
     );
 }
 ```
