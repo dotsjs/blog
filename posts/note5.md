@@ -9,12 +9,12 @@ title: '무작정 따라 하는 리액트 - Note(5)'
 ## 목차
 
 1. [스타일링](#스타일링)
-2. [Header](#Header)
-3. [Main](#Main)
-4. [List](#List)
-5. [Item](#Item)
-6. [Note](#Note)
-7. [Edit](#Edit)
+2. [Header](#header)
+3. [Main](#main)
+4. [List](#list)
+5. [Item](#item)
+6. [Note](#note)
+7. [Edit](#edit)
 
 ## 스타일링
 
